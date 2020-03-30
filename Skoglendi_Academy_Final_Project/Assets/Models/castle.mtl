@@ -1,0 +1,442 @@
+newmtl Wood1Mtl
+Material Color
+Ka 0.0209511 0.0209511 0.022013
+Kd 0.0209511 0.0209511 0.022013
+Ks 0.00131458 0.00131458 0.00138121 
+
+d 1
+
+Ns 0
+
+newmtl Meat1Mtl
+Material Color
+Ka 0.25084 0.0445526 0.0445526
+Kd 0.25084 0.0445526 0.0445526
+Ks 0.146569 0.0260327 0.0260327 
+
+d 1
+
+Ns 0
+
+newmtl Base4Mtl
+Material Color
+Ka 0.101145 0.0697271 0.0511221
+Kd 0.101145 0.0697271 0.0511221
+Ks 0.00515642 0.00355471 0.00260622 
+
+d 1
+
+Ns 0
+
+newmtl Wood2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Wood2Tex.png
+map_Kd Wood2Tex.png
+map_d Wood2Tex.png
+
+newmtl Base2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0509804 0.0509804 0.0509804 
+
+d 1
+
+Ns 0
+
+map_Ka Base2Tex.png
+map_Kd Base2Tex.png
+map_d Base2Tex.png
+
+newmtl SmoothBlockModel1Mtl
+Material Color
+Ka 0.20471 0.106156 0.0581872
+Kd 0.20471 0.106156 0.0581872
+Ks 0.0128446 0.00666077 0.00365096 
+
+d 1
+
+Ns 0
+
+newmtl Part1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+newmtl Liquid1Mtl
+Material Color
+Ka 0.103634 0.108711 0.14198
+Kd 0.103634 0.108711 0.14198
+Ks 0.0247909 0.0260054 0.0339639 
+
+d 0.501961
+
+Ns 255
+
+newmtl Part2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Part2Tex.png
+map_Kd Part2Tex.png
+map_d Part2Tex.png
+
+newmtl Wick1Mtl
+Material Color
+Ka 0.00715504 0.018913 0.0315514
+Kd 0.00715504 0.018913 0.0315514
+Ks 0.000196413 0.00051918 0.000866117 
+
+d 1
+
+Ns 0
+
+newmtl Base1Mtl
+Material Color
+Ka 0.579547 0.420508 0.190463
+Kd 0.579547 0.420508 0.190463
+Ks 0.0295455 0.0214377 0.00970987 
+
+d 1
+
+Ns 0
+
+newmtl Part4030Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Part4030Tex.png
+map_Kd Part4030Tex.png
+map_d Part4030Tex.png
+
+newmtl Part464Mtl
+Material Color
+Ka 0.00715504 0.018913 0.0315514
+Kd 0.00715504 0.018913 0.0315514
+Ks 0.00227278 0.00600765 0.0100222 
+
+d 1
+
+Ns 255
+
+newmtl Union4Mtl
+Material Color
+Ka 0.358654 0.234895 0.0759261
+Kd 0.358654 0.234895 0.0759261
+Ks 0.113925 0.0746138 0.0241177 
+
+d 1
+
+Ns 255
+
+newmtl Union15Mtl
+Material Color
+Ka 0.14198 0.133209 0.106156
+Kd 0.14198 0.133209 0.106156
+Ks 0.0450996 0.0423133 0.0337202 
+
+d 1
+
+Ns 255
+
+newmtl Candle1Mtl
+Material Color
+Ka 0.415148 0.399293 0.348865
+Kd 0.415148 0.399293 0.348865
+Ks 0.167687 0.161283 0.140914 
+
+d 1
+
+Ns 0
+
+newmtl Carpet1Mtl
+Material Color
+Ka 0.523443 0.139022 0.121986
+Kd 0.523443 0.139022 0.121986
+Ks 0.014369 0.0038163 0.00334863 
+
+d 1
+
+Ns 0
+
+newmtl Bannerpart2Mtl
+Material Color
+Ka 0.511398 0.334458 0.108711
+Kd 0.511398 0.334458 0.108711
+Ks 0.0220603 0.0144276 0.0046895 
+
+d 1
+
+Ns 0
+
+newmtl Carpet2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.027451 0.027451 0.027451 
+
+d 1
+
+Ns 0
+
+map_Ka Carpet2Tex.png
+map_Kd Carpet2Tex.png
+map_d Carpet2Tex.png
+
+newmtl Union8Mtl
+Material Color
+Ka 0.151058 0.0962661 0.0677246
+Kd 0.151058 0.0962661 0.0677246
+Ks 0.0272497 0.0173657 0.012217 
+
+d 1
+
+Ns 0
+
+newmtl Union9Mtl
+Material Color
+Ka 0.0869013 0.0869013 0.0869013
+Kd 0.0869013 0.0869013 0.0869013
+Ks 0.0156763 0.0156763 0.0156763 
+
+d 1
+
+Ns 0
+
+map_Ka Union9Tex.png
+map_Kd Union9Tex.png
+map_d Union9Tex.png
+
+newmtl Part828Mtl
+Material Color
+Ka 0.579547 0.420508 0.190463
+Kd 0.579547 0.420508 0.190463
+Ks 0.0250001 0.0181396 0.00821605 
+
+d 1
+
+Ns 0
+
+newmtl Sack1Mtl
+Material Color
+Ka 0.687031 0.56681 0.329729
+Kd 0.687031 0.56681 0.329729
+Ks 0.0511905 0.0422329 0.024568 
+
+d 1
+
+Ns 0
+
+newmtl Hook1Mtl
+Material Color
+Ka 0.00715504 0.018913 0.0315514
+Kd 0.00715504 0.018913 0.0315514
+Ks 0.000448943 0.0011867 0.0019797 
+
+d 1
+
+Ns 0
+
+newmtl Part459Mtl
+Material Color
+Ka 0.579547 0.420508 0.190463
+Kd 0.579547 0.420508 0.190463
+Ks 0.0159091 0.0115434 0.00522839 
+
+d 1
+
+Ns 0
+
+newmtl Hide1Mtl
+Material Color
+Ka 0.151058 0.0962661 0.0677246
+Kd 0.151058 0.0962661 0.0677246
+Ks 0.00651623 0.00415266 0.00292145 
+
+d 1
+
+Ns 0
+
+newmtl Bone1Mtl
+Material Color
+Ka 0.415148 0.399293 0.348865
+Kd 0.415148 0.399293 0.348865
+Ks 0.0179083 0.0172244 0.0150491 
+
+d 1
+
+Ns 0
+
+newmtl Noose1Mtl
+Material Color
+Ka 0.687031 0.56681 0.329729
+Kd 0.687031 0.56681 0.329729
+Ks 0.0188597 0.0155595 0.00905139 
+
+d 1
+
+Ns 0
+
+newmtl Part814Mtl
+Material Color
+Ka 0.124741 0.113921 0.121986
+Kd 0.124741 0.113921 0.121986
+Ks 0.0396236 0.0361867 0.0387484 
+
+d 1
+
+Ns 255
+
+newmtl Part817Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.00082138 0.00082138 0.00082138 
+
+d 1
+
+Ns 255
+
+newmtl Woodtop1Mtl
+Material Color
+Ka 0.20471 0.106156 0.0581872
+Kd 0.20471 0.106156 0.0581872
+Ks 0.029703 0.015403 0.00844285 
+
+d 1
+
+Ns 0
+
+newmtl Keyhole1Mtl
+Material Color
+Ka 0.579547 0.420508 0.190463
+Kd 0.579547 0.420508 0.190463
+Ks 0.184091 0.133573 0.0605 
+
+d 1
+
+Ns 255
+
+newmtl Bannerpart1Mtl
+Material Color
+Ka 0.0915184 0.0134734 0.0134734
+Kd 0.0915184 0.0134734 0.0134734
+Ks 0.00394785 0.000581205 0.000581205 
+
+d 1
+
+Ns 0
+
+newmtl Pole1Mtl
+Material Color
+Ka 0.151058 0.0962661 0.0677246
+Kd 0.151058 0.0962661 0.0677246
+Ks 0.0219182 0.013968 0.00982671 
+
+d 1
+
+Ns 0
+
+newmtl Union129Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Union129Tex.png
+map_Kd Union129Tex.png
+map_d Union129Tex.png
+
+newmtl Part3435Mtl
+Material Color
+Ka 0.306635 0.254916 0.25084
+Kd 0.306635 0.254916 0.25084
+Ks 0.0192398 0.0159947 0.015739 
+
+d 1
+
+Ns 0
+
+newmtl Part3437Mtl
+Material Color
+Ka 0.14198 0.133209 0.106156
+Kd 0.14198 0.133209 0.106156
+Ks 0.00890857 0.00835818 0.00666077 
+
+d 1
+
+Ns 0
+
+newmtl Part3594Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Part3594Tex.png
+map_Kd Part3594Tex.png
+map_d Part3594Tex.png
+
+newmtl Part4097Mtl
+Material Color
+Ka 0.0915184 0.0511221 0.0328759
+Kd 0.0915184 0.0511221 0.0328759
+Ks 0.0132791 0.00741771 0.00477023 
+
+d 1
+
+Ns 0
+
+newmtl Bowl1Mtl
+Material Color
+Ka 0.101145 0.0697271 0.0511221
+Kd 0.101145 0.0697271 0.0511221
+Ks 0.014676 0.0101173 0.00741771 
+
+d 1
+
+Ns 0
+
+newmtl Jar1Mtl
+Material Color
+Ka 0.306635 0.193972 0.186989
+Kd 0.306635 0.193972 0.186989
+Ks 0.0312647 0.0197776 0.0190655 
+
+d 1
+
+Ns 0
+
