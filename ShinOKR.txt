@@ -1,0 +1,3 @@
+Schedule and deliverable
+	Creation of rough level obj, textures, and mtl mappings (10 hours)
+	Improvement of details in level design (6 hours)
