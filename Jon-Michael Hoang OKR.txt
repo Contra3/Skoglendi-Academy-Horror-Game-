@@ -1,0 +1,5 @@
+Schedule and Deliverables:
+	AI implementation -- by Wednesday April 1st in class (total estimate: 6 hours)
+		Aggresion/targeting towards the player (estimate: 1.5 hours)
+		Interacting with the player on contact (estimate: 1.5 hours)
+		Object/Wall detection (estimate: 3 hours)
