@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CreatureAI
+  - pickObject
   layers:
   - Default
   - TransparentFX
