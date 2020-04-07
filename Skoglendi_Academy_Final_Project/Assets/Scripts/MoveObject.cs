@@ -17,10 +17,11 @@ public class MoveObject : MonoBehaviour
     private Ray playerAim;
     private GameObject objectHeld;
     private bool isObjectHeld;
-   
+    private Animator anim;
     void Start () {
         isObjectHeld = false;
         objectHeld = null;
+        anim = GetComponentInChildren<Animator>();
     }
    
     void FixedUpdate () {
@@ -35,6 +36,7 @@ public class MoveObject : MonoBehaviour
         }
        
         if(Input.GetKeyDown(KeyCode.E) && isObjectHeld){
+            anim.SetTrigger("Spell");
             isObjectHeld = false;
             objectHeld.GetComponent<Rigidbody>().useGravity = true;
             ThrowObject();
