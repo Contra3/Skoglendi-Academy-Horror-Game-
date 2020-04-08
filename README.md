@@ -11,7 +11,7 @@
 ### Creature AI will chase you if you get too close
 ### Small portion of the level constructed reflects what the final project overall level will be like
 
-#Design and Rationale of implemented components
+# Design and Rationale of implemented components
 
 ### Physics
 
