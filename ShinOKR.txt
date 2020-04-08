@@ -1,3 +1,9 @@
 Schedule and deliverable
-	Creation of rough level obj, textures, and mtl mappings (10 hours)
-	Improvement of details in level design (6 hours)
+	Creation of rough level obj, textures, and mtl mappings (10 hours) => DONE
+	Improvement of details in level design (6 hours) => DONE
+	
+4/8/20
+	Arm animations and controllers (3 hrs)=> DONE
+	fire sfx (1hr)  => DONE
+
+4/15/20
