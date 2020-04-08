@@ -21,7 +21,7 @@ public class MoveObject : MonoBehaviour
     void Start () {
         isObjectHeld = false;
         objectHeld = null;
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
     }
    
     void FixedUpdate () {
@@ -35,8 +35,11 @@ public class MoveObject : MonoBehaviour
             DropObject();
         }
        
-        if(Input.GetKeyDown(KeyCode.E) && isObjectHeld){
+        if(Input.GetKeyDown(KeyCode.E))
             anim.SetTrigger("Spell");
+
+        if(Input.GetKeyDown(KeyCode.E) && isObjectHeld){
+            
             isObjectHeld = false;
             objectHeld.GetComponent<Rigidbody>().useGravity = true;
             ThrowObject();
