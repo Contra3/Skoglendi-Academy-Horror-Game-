@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public float lookRadius = 100.0f;
+    public float lookRadius = 5.0f;
 
     // target
     Transform target;
@@ -27,8 +27,11 @@ public class EnemyController : MonoBehaviour
 
         if (dist <= lookRadius)
         {
+            lookRadius = 10000.0f;
+            anim.SetInteger("moving", 0);
             anim.SetInteger("battle", 1);
-            anim.SetInteger("moving", 2);
+            anim.SetInteger("creatureRun", 1);
+            agent.speed = 10;
             agent.SetDestination(target.position);
         }
     }
