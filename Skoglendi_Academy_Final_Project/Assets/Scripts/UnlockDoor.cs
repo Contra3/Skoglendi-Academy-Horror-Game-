@@ -14,7 +14,6 @@ public class UnlockDoor : MonoBehaviour
     private Rigidbody DoorOneRigid;
     private Rigidbody DoorTwoRigid;
 
-
     private void Start()
     {
         DoorNotification.gameObject.SetActive(false);
@@ -48,11 +47,11 @@ public class UnlockDoor : MonoBehaviour
 
         }
 
+        // Cheat to get the key
         if (Input.GetKeyDown(KeyCode.P))
         {
             haveKey = true;
         }
-
 
 
     }

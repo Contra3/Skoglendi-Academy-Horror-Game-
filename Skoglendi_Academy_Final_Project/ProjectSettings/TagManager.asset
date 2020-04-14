@@ -8,6 +8,7 @@ TagManager:
   - pickObject
   - waypoint
   - Target
+  - CreatureMeleeRange
   layers:
   - Default
   - TransparentFX
