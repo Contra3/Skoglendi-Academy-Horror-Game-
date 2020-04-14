@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log("Players health: " + currentPlayerHealth);
     }
 
     public void PlayerTakeDamage(float damage, float maxHealth)

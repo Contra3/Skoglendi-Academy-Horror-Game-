@@ -50,9 +50,9 @@ public class EnemyController : MonoBehaviour
             // If player is within melee range of creature then creature will attack
             if(PlayerNearCreature.playerNearCreature == true)
             {
-                    anim.SetInteger("creatureRun", 2);
-                    anim.SetInteger("moving", 4);
-          
+                anim.SetInteger("creatureRun", 2);
+                anim.SetInteger("moving", 4);
+                    
             }
             else
             {
