@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UnlockDoor : MonoBehaviour
 {
 
-    public static bool haveKey = false;
+    
     private bool nearDoor = false;
     public Text DoorNotification;
     public GameObject DoorOne;
@@ -32,12 +32,12 @@ public class UnlockDoor : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
 
-            if(haveKey == false && nearDoor == true)
+            if(PlayerController.haveKey == false && nearDoor == true)
             {
                 DoorNotification.gameObject.SetActive(true);
                 DoorNotification.text = "Door Locked";
             }
-            else if (haveKey == false && nearDoor == true)
+            else if (PlayerController.haveKey == true && nearDoor == true)
             {
                 DoorNotification.text = "Unlocked";
                 DoorNotification.gameObject.SetActive(true);
@@ -50,7 +50,7 @@ public class UnlockDoor : MonoBehaviour
         // Cheat to get the key
         if (Input.GetKeyDown(KeyCode.P))
         {
-            haveKey = true;
+            PlayerController.haveKey = true;
         }
 
 

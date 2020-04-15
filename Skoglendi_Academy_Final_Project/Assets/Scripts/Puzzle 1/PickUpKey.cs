@@ -14,7 +14,7 @@ public class PickUpKey : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && nearKey == true)
         {
             Destroy(gameObject);
-            UnlockDoor.haveKey = true;
+            PlayerController.haveKey = true;
         }
 
     }

@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public static float maxPlayerHealth = 100f;
     public static float currentPlayerHealth = 100f;
 
+    // First puzzle of game
+    public static bool haveKey = false;
+
 
     // For the last puzzle of the game
     public static bool hasMasterKey = false;
@@ -18,13 +21,23 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerController.currentPlayerHealth = 100;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.Log("Players health: " + currentPlayerHealth);
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            currentPlayerHealth = 0;
+        }
+
+
+
     }
 
     public void PlayerTakeDamage(float damage, float maxHealth)
