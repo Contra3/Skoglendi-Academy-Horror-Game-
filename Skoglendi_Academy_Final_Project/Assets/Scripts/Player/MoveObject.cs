@@ -37,6 +37,8 @@ public class MoveObject : MonoBehaviour
        
         if(Input.GetKeyDown(KeyCode.E))
             anim.SetTrigger("Spell");
+        if(Input.GetKeyDown(KeyCode.G))
+            anim.SetTrigger("Death");
 
         if(Input.GetKeyDown(KeyCode.E) && isObjectHeld){
             
