@@ -6,7 +6,12 @@ public class PickUpKey : MonoBehaviour
 {
 
     private bool nearKey = false;
+    private AudioSource audio;
 
+
+    private void Start() {
+        audio = GetComponentInChildren<AudioSource>();
+    }
 
     private void Update()
     {
@@ -15,6 +20,7 @@ public class PickUpKey : MonoBehaviour
         {
             Destroy(gameObject);
             UnlockDoor.haveKey = true;
+            audio.Play(0);
         }
 
     }
