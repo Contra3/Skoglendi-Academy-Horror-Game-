@@ -29,15 +29,15 @@ public class UnlockDoor : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && nearDoor == true)
+        if(Input.GetKeyDown(KeyCode.E))
         {
 
-            if(haveKey == false)
+            if(haveKey == false && nearDoor == true)
             {
                 DoorNotification.gameObject.SetActive(true);
                 DoorNotification.text = "Door Locked";
             }
-            else
+            else if (haveKey == false && nearDoor == true)
             {
                 DoorNotification.text = "Unlocked";
                 DoorNotification.gameObject.SetActive(true);
@@ -61,15 +61,23 @@ public class UnlockDoor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Player near door");
-        nearDoor = true;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            nearDoor = true;
+        }
+
     }
 
 
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Player no longer near door");
-        DoorNotification.gameObject.SetActive(false);
-        nearDoor = false;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            DoorNotification.gameObject.SetActive(false);
+            nearDoor = false;
+        }
+
     }
 
 }
