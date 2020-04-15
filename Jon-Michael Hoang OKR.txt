@@ -1,14 +1,19 @@
 Schedule and Deliverables:
-	AI implementation -- by Wednesday April 15th in class (total estimate: 2 hours) 
-		Interacting with the player on contact (estimate: 2 hours) ==> NOT DONE
+	AI implementation -- by Wednesday April 22nd in class (total estimate: 4 hours) 
+		 Transition from chase mode to patrol mode (estimate: 4 hours)
 
+	At least one shader construct -- by Wednesday April 22nd in class (estimate: 3 hours)
+
+	Update Design Document -- by Wednesday April 22nd in class (estimate: 4 hours)
+	
+DONE: 
 	Ambient sound/music -- by Wednesday April 15th in class (total estimate: 1 hour) 
 
 	Expand level and add puzzles -- by Wednesday April 15th in class (total estimate: 6 hours) 
 
 	UI design -- by Wednesday April 15th in class (total estimate: 6 hours) 
 
-DONE: 
 	AI implementation -- by Wednesday April 1st in class (total estimate: 6 hours)
 		Aggresion/targeting towards the player (estimate: 1.5 hours)
 		Object/Wall detection (estimate: 3 hours)
+		Interacting with the player on contact (estimate: 2 hours)
