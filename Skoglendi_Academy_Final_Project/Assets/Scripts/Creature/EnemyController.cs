@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
                 chaseMusicPlaying = true;
             }
             
-            lookRadius = 10000.0f;
+            lookRadius = 10.0f;
 
             // If player is within melee range of creature then creature will attack
             if(PlayerNearCreature.playerNearCreature == true)
