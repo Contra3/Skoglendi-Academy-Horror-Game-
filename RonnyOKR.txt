@@ -1,4 +1,5 @@
 Schedule and delieverable:
 	Implementation of the levitation spell -- Tue 11:59 P.M. 4/7/20 (estimate: 4-6 hours) DONE
-	Expand level design -- Tue 11:59 P.M. (estimate: 10 hours) 4/14/20
+	Expand level design -- Tue 11:59 P.M. (estimate: 10 hours) 4/14/20 DONE
+	Add scroll implementation, expand level again,  more puzzles -- Tue 11:59 P.M. (estimate: 15 hours) 4/21/20
 	
