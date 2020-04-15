@@ -33,7 +33,7 @@ public class CreaturePatrol : MonoBehaviour
     }
 
     // When the npc enters the trigger it will count the CurrentTarget that will choose a targetCube linearly
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
 
         Debug.Log("Trigger activated");

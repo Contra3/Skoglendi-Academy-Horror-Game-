@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public float lookRadius = 5.0f;
+    public float lookRadius = 12.5f;
     public GameObject chaseMusic;
-    AudioSource theChaseMusic;
+    static AudioSource theChaseMusic;
     private bool chaseMusicPlaying = false;
     private bool creatureAttack = true;
 
@@ -41,11 +41,11 @@ public class EnemyController : MonoBehaviour
         {
             if(chaseMusicPlaying == false)
             {
-                theChaseMusic.Play();
+                StartCoroutine(FadeIn(theChaseMusic, 1.0f));
                 chaseMusicPlaying = true;
             }
             
-            lookRadius = 10.0f;
+            lookRadius = 15f;
 
             // If player is within melee range of creature then creature will attack
             if(PlayerNearCreature.playerNearCreature == true)
@@ -62,7 +62,11 @@ public class EnemyController : MonoBehaviour
                 agent.speed = 10;
                 agent.SetDestination(target.position);
             }
-
+        }
+        else if (chaseMusicPlaying == true || playerDistance > lookRadius)
+        {
+            StartCoroutine(FadeOut(theChaseMusic, 1.0f));
+            chaseMusicPlaying = false;
         }
     }
 
@@ -79,12 +83,31 @@ public class EnemyController : MonoBehaviour
         creatureAttack = true;
     }
 
+    IEnumerator FadeOut(AudioSource audioSource, float fadeTime)
+    {
+        float initialVolume = theChaseMusic.volume;
 
+        while (theChaseMusic.volume > 0)
+        {
+            theChaseMusic.volume -= initialVolume * Time.deltaTime / fadeTime;
+        }
 
+        theChaseMusic.Stop();
+        yield return null;
+    }
 
+    IEnumerator FadeIn(AudioSource audioSource, float fadeTime)
+    {
+        audioSource.Play();
+        audioSource.volume = 0f;
 
+        while (audioSource.volume < 1)
+        {
+            audioSource.volume += Time.deltaTime / fadeTime;
 
-
+            yield return null;
+        }
+    }
 
 }// end of EnemyController class
 
