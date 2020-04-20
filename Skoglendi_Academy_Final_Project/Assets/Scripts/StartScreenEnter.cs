@@ -11,6 +11,7 @@ public class StartScreenEnter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         MainMenuPanel.SetActive(false);
     }
 
@@ -22,6 +23,7 @@ public class StartScreenEnter : MonoBehaviour
             StartScreenPanel.SetActive(false);
             MainMenuPanel.SetActive(true);
             startScreenDisabled = true;
+
         }
     }
 }
