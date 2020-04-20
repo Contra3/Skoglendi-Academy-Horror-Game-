@@ -6,9 +6,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    // Player Stats
     public SimpleHealthBar healthBar;
     public static float maxPlayerHealth = 100f;
     public static float currentPlayerHealth = 100f;
+    public float sprintNum = 100f;
+
 
     // First puzzle of game
     public static bool haveKey = false;
@@ -21,7 +24,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerController.currentPlayerHealth = 100;
+        currentPlayerHealth = 100;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

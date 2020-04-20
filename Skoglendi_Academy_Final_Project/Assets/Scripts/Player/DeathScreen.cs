@@ -31,7 +31,7 @@ public class DeathScreen : MonoBehaviour
 
     public void ReloadLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 
