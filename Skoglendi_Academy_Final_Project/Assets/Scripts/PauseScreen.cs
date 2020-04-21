@@ -84,7 +84,7 @@ public class PauseScreen : MonoBehaviour
         PausePanel.SetActive(false);
         MenuCamera.SetActive(false);
         MainCharacter.SetActive(true);
-
+       
         isPausePanelEnabled = false;
         Time.timeScale = 1f;
     }
