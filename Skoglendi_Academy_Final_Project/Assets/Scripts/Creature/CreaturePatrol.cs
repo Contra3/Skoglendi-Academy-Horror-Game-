@@ -7,11 +7,15 @@ public class CreaturePatrol : MonoBehaviour
 {
 
     private Animator anim;
-    private NavMeshAgent NPC;
-    private int NPCWait = 0;
+
 
     // Deals with waypoints
-    [SerializeField] List<GameObject> WayPoints = new List<GameObject>();
+    [SerializeField] List<GameObject> FirstPuzzleWaypoints = new List<GameObject>();
+    [SerializeField] List<GameObject> SecondPuzzleWaypoints = new List<GameObject>();
+
+    [SerializeField] List<GameObject> CurrWaypoint = new List<GameObject>();
+
+
     public int waypointTarget;
     public string waypointName;
     public string waypointDesc;
@@ -23,21 +27,38 @@ public class CreaturePatrol : MonoBehaviour
 
     void Start()
     {
-        WayPointCount = WayPoints.Count;
+        CurrWaypoint = FirstPuzzleWaypoints;
+        WayPointCount = CurrWaypoint.Count;
         waypointTarget = Random.Range(0, WayPointCount);
-        waypointLocation = WayPoints[waypointTarget].transform;
+        waypointLocation = CurrWaypoint[waypointTarget].transform;
         MoveToWaypoint();
         anim = GetComponentInParent<Animator>();
         lastWaypoint = waypointTarget;
         anim.SetInteger("moving", 1);
     }
 
+    private void Update()
+    {
+        // If player touched the red gem in puzzle 2 then creature will follow new route
+        if(TouchRedGem.puzzle1RedGemTrigger == true)
+        {
+            CurrWaypoint = SecondPuzzleWaypoints;
+        }
+
+        if(EnemyController.playerNearCreature == false)
+        {
+            MoveToWaypoint();
+        }
+
+
+
+    }
+
     // When the npc enters the trigger it will count the CurrentTarget that will choose a targetCube linearly
     public void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("Trigger activated");
-
+        //Debug.Log("Trigger activated");
         if (other.gameObject.CompareTag("Target")) // Searches for tag
         {
             // Grabs the name of the current collider
@@ -86,8 +107,8 @@ public class CreaturePatrol : MonoBehaviour
 
     void MoveToWaypoint()
     {
-        waypointLocation = WayPoints[waypointTarget].transform; // Where the target is at
-        waypointDesc = WayPoints[waypointTarget].name.ToString(); // The name of the target
+        waypointLocation = CurrWaypoint[waypointTarget].transform; // Where the target is at
+        waypointDesc = CurrWaypoint[waypointTarget].name.ToString(); // The name of the target
         GetComponentInParent<NavMeshAgent>().destination = waypointLocation.position; // Move to the target position
         lastWaypoint = waypointTarget;
 

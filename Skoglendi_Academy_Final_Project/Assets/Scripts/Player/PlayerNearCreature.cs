@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class PlayerNearCreature : MonoBehaviour
 {
-    public static bool playerNearCreature = false;
+    public static bool playerNearMeleeRange = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("CreatureMeleeRange"))
         {
-            playerNearCreature = true;
+            playerNearMeleeRange = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("CreatureMeleeRange"))
-        {
-            playerNearCreature = false;
-        }
+        playerNearMeleeRange = false;
     }
 }

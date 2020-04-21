@@ -13,6 +13,7 @@ public class TouchRedGem : MonoBehaviour
     public GameObject angelStatue;
 
     private bool nearRedGem = false;
+    public static bool puzzle1RedGemTrigger = false;
     private AudioSource audio;
 
     private void Start()
@@ -28,6 +29,7 @@ public class TouchRedGem : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && nearRedGem == true)
         {
             angelStatue.SetActive(true);
+            puzzle1RedGemTrigger = true;
             audio.Play(0);
         }
 

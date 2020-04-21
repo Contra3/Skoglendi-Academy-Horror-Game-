@@ -8,7 +8,7 @@ public class CreatureHit : MonoBehaviour
     public PlayerController player;
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         gameSound.Play();
         player.PlayerTakeDamage(15, 100);
