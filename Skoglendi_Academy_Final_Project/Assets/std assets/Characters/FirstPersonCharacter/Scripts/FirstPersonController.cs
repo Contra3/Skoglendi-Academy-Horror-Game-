@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityStandardAssets.Utility;
+using UnityStandardAssets.Utility; 
 using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -41,6 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private PlayerController pc;
 
         // Use this for initialization
         private void Start()
@@ -55,6 +56,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            pc = GetComponent<PlayerController>(); //edited in by shin
         }
 
 
@@ -217,6 +219,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
+
+            if (speed == m_RunSpeed && pc.currentStamina > 0)
+            {
+                pc.currentStamina -= 1;
+            }
+            else 
+            {
+                speed = m_WalkSpeed;
+                pc.currentStamina = pc.currentStamina < 100 ? (pc.currentStamina + 0.5f) : 100;
+            }
 
             // normalize input if it exceeds 1 in combined length:
             if (m_Input.sqrMagnitude > 1)

@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour
 {
 
     // Player Stats
     public SimpleHealthBar healthBar;
+    public SimpleHealthBar staminaBar;
     public static float maxPlayerHealth = 100f;
     public static float currentPlayerHealth = 100f;
+    public float maxStamina = 100f;
+    public float currentStamina = 100f;
     public float sprintNum = 100f;
 
 
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentStamina = 100;
         currentPlayerHealth = 100;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -40,7 +43,8 @@ public class PlayerController : MonoBehaviour
         }
 
 
-
+        staminaBar.UpdateBar(currentStamina, maxStamina);
+        print("ST: " + currentStamina + " max: " + maxStamina);
     }
 
     public void PlayerTakeDamage(float damage, float maxHealth)
