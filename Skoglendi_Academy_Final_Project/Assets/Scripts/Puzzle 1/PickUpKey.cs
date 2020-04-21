@@ -7,7 +7,7 @@ public class PickUpKey : MonoBehaviour
 
     private bool nearKey = false;
     private AudioSource audio;
-
+    public int keyID;
 
     private void Start() {
         audio = GetComponentInChildren<AudioSource>();
