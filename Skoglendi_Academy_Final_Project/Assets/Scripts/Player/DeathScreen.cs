@@ -19,13 +19,13 @@ public class DeathScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerController.currentPlayerHealth <= 0)
-        {
-            PlayerController.haveKey = false;
-            deathPanel.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        //if(PlayerController.currentPlayerHealth <= 0)
+        //{
+        //    PlayerController.haveKey = false;
+        //    deathPanel.SetActive(true);
+        //    Cursor.lockState = CursorLockMode.None;
+        //    Cursor.visible = true;
+        //}
     }
 
 

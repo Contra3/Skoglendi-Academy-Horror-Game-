@@ -5079,6 +5079,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6704880662330718822}
+  - component: {fileID: 7382331735330289883}
+  - component: {fileID: 8039522278810798710}
   - component: {fileID: 6704880662325203846}
   - component: {fileID: 6704880662323680166}
   - component: {fileID: 6704880662334129446}
@@ -5113,6 +5115,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 224.269, z: 0}
+--- !u!114 &7382331735330289883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704880662330746438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bbe28958bfa6c41b7c9540e9887b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8039522278810798710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704880662330746438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef58eee1161ebc842be2d22d448755d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!143 &6704880662325203846
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5412,6 +5438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  staminaBar: {fileID: 0}
   sprintNum: 100
 --- !u!114 &6704880662330746491
 MonoBehaviour:

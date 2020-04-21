@@ -6,9 +6,14 @@ using UnityEngine.UI;
 public class UnlockDoor : MonoBehaviour
 {
 
-    
+    // Puzzle ID is set in the inspector
+    public int PuzzleDoorID;
     private bool nearDoor = false;
+
+    private bool hasKey;
+
     public Text DoorNotification;
+    public bool isDoubleDoor;
     public GameObject DoorOne;
     public GameObject DoorTwo;
     private Rigidbody DoorOneRigid;
@@ -19,30 +24,43 @@ public class UnlockDoor : MonoBehaviour
         DoorNotification.gameObject.SetActive(false);
 
         DoorOneRigid = DoorOne.GetComponent<Rigidbody>();
-        DoorTwoRigid = DoorTwo.GetComponent<Rigidbody>();
 
+        if(isDoubleDoor == true)
+        {
+            DoorTwoRigid = DoorTwo.GetComponent<Rigidbody>();
+            DoorTwoRigid.isKinematic = true;
+        }
+        
         DoorOneRigid.isKinematic = true;
-        DoorTwoRigid.isKinematic = true;
 
     }
 
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+
+        if (hasKey == false && nearDoor == true)
+        {
+            DoorNotification.gameObject.SetActive(true);
+            DoorNotification.text = "Door is locked, there must be a key around here.";
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
 
-            if(PlayerController.haveKey == false && nearDoor == true)
-            {
-                DoorNotification.gameObject.SetActive(true);
-                DoorNotification.text = "Door Locked";
-            }
-            else if (PlayerController.haveKey == true && nearDoor == true)
+           if (hasKey == true && nearDoor == true)
             {
                 DoorNotification.text = "Unlocked";
                 DoorNotification.gameObject.SetActive(true);
                 DoorOneRigid.isKinematic = false;
-                DoorTwoRigid.isKinematic = false;
+
+                if(isDoubleDoor == true)
+                {
+                    DoorTwoRigid.isKinematic = false;
+                }
+
+                
+
             }
 
         }
@@ -50,20 +68,56 @@ public class UnlockDoor : MonoBehaviour
         // Cheat to get the key
         if (Input.GetKeyDown(KeyCode.P))
         {
-            PlayerController.haveKey = true;
+            hasKey = true;
         }
 
 
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player near door");
+        //Debug.Log("Player near door");
         if (other.gameObject.CompareTag("Player"))
         {
             nearDoor = true;
+
+
+            if (PuzzleDoorID == 1)
+            {
+                if (PlayerSaveScript.PuzzleKey1)
+                {
+                    hasKey = true;
+                }
+            }
+            if (PuzzleDoorID == 2)
+            {
+                if (PlayerSaveScript.PuzzleKey2)
+                {
+                    hasKey = true;
+                }
+            }
+            if (PuzzleDoorID == 3)
+            {
+                if (PlayerSaveScript.PuzzleKey3)
+                {
+                    hasKey = true;
+                }
+            }
+            if (PuzzleDoorID == 4)
+            {
+                if (PlayerSaveScript.PuzzleKey4)
+                {
+                    hasKey = true;
+                }
+            }
+            if (PuzzleDoorID == 5)
+            {
+                if (PlayerSaveScript.PuzzleKey5)
+                {
+                    hasKey = true;
+                }
+            }
+
         }
 
     }
@@ -71,7 +125,7 @@ public class UnlockDoor : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Player no longer near door");
+        //Debug.Log("Player no longer near door");
         if (other.gameObject.CompareTag("Player"))
         {
             DoorNotification.gameObject.SetActive(false);

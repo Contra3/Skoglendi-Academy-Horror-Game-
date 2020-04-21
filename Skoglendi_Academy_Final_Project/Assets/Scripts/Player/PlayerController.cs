@@ -16,11 +16,11 @@ public class PlayerController : MonoBehaviour
 
 
     // First puzzle of game
-    public static bool haveKey = false;
+    //public static bool haveKey = false;
 
 
     // For the last puzzle of the game
-    public static bool hasMasterKey = false;
+    //public static bool hasMasterKey = false;
 
 
     // Start is called before the first frame update

@@ -19,15 +19,32 @@ public class PickUpKey : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && nearKey == true)
         {
             Destroy(gameObject);
-            PlayerController.haveKey = true;
+
+            if(keyID == 1)
+            {
+                PlayerSaveScript.PuzzleKey1 = true;
+            }
+            else if (keyID == 2)
+            {
+                PlayerSaveScript.PuzzleKey2 = true;
+            }
+            else if (keyID == 3)
+            {
+                PlayerSaveScript.PuzzleKey3 = true;
+            }
+            else if (keyID == 4)
+            {
+                PlayerSaveScript.PuzzleKey4 = true;
+            }
+            else if (keyID == 5)
+            {
+                PlayerSaveScript.PuzzleKey5 = true;
+            }
+
             audio.Play(0);
         }
 
     }
-
-
-
-
 
     private void OnTriggerEnter(Collider other)
     {
