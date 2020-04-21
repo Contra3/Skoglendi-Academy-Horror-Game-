@@ -41,7 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-        private PlayerController pc;
+        // private PlayerController pc;
 
         // Use this for initialization
         private void Start()
@@ -56,7 +56,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-            pc = GetComponent<PlayerController>(); //edited in by shin
+            // pc = GetComponent<PlayerController>(); //edited in by shin
         }
 
 
@@ -220,14 +220,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
 
-            if (speed == m_RunSpeed && pc.currentStamina > 0)
+            if (speed == m_RunSpeed && PlayerController.currentStamina > 0)
             {
-                pc.currentStamina -= 1;
+                PlayerController.currentStamina -= 1;
             }
             else 
             {
                 speed = m_WalkSpeed;
-                pc.currentStamina = pc.currentStamina < 100 ? (pc.currentStamina + 0.5f) : 100;
+                PlayerController.currentStamina = PlayerController.currentStamina < PlayerController.maxStamina ? (PlayerController.currentStamina + 0.5f) : PlayerController.maxStamina;
             }
 
             // normalize input if it exceeds 1 in combined length:

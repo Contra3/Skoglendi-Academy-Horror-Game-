@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     public SimpleHealthBar staminaBar;
     public static float maxPlayerHealth = 100f;
     public static float currentPlayerHealth = 100f;
-    public float maxStamina = 100f;
-    public float currentStamina = 100f;
+    public static float maxStamina = 100f;
+    public static float currentStamina = 100f;
     public float sprintNum = 100f;
 
 
