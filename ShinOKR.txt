@@ -11,3 +11,9 @@ Schedule and deliverable
 	death animation (1hr) => DONE
 	sfx for gem, key, and stone door(1hr) => DONE
 
+4/21/20
+	Jump spell & puzzle 3(5 hrs) DONE
+	credits (1hr) DONE
+	Shader (2 hrs) DONE
+	stamina bar (3 hrs) DONE
+
