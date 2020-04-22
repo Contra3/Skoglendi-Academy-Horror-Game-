@@ -60,9 +60,10 @@ public class UnlockDoor : MonoBehaviour
                     DoorTwoRigid.isKinematic = false;
                 }
 
+                // Save locations depending on which door the player interacts with
                 if (PuzzleDoorID == 1) { PlayerSaveScript.PuzzleOneDone = true; PlayerSaveScript.PlayerSaveLocation = 1; }
                 if (PuzzleDoorID == 2) { PlayerSaveScript.PuzzleTwoDone = true; PlayerSaveScript.PlayerSaveLocation = 3; }
-                if (PuzzleDoorID == 3) { PlayerSaveScript.PuzzleThreeDone = true; }
+                if (PuzzleDoorID == 3) { PlayerSaveScript.PuzzleThreeDone = true; PlayerSaveScript.PlayerSaveLocation = 4; }
                 if (PuzzleDoorID == 4) { PlayerSaveScript.PuzzleFourDone = true; }
                 if (PuzzleDoorID == 5) { PlayerSaveScript.PuzzleFiveDone = true; }
 

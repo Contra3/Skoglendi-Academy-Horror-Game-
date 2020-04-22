@@ -7,10 +7,12 @@ public class JumpScript : MonoBehaviour
 {
     protected bool nearItem = false;
     protected AudioSource audio;
+    private bool gotScroll = false;
 
     public Text notification;
 
-    private void Start() {
+    private void Start()
+    {
         audio = GetComponentInChildren<AudioSource>();
     }
 
@@ -29,18 +31,25 @@ public class JumpScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && nearItem == true)
         {
-            gameObject.SetActive(false);
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
             PlayerController.abilities["JUMP"] = true;
-            notification.text = "You found the super jump scroll. Press 'R' to aim and L Mouse to jump";
+            notification.text = "You found the super jump scroll. Press 'R' to aim and Left Mouse to jump";
             notification.gameObject.SetActive(true);
             audio.Play(0);
-            IEnumerator waiter() 
-            {
-                yield return new WaitForSeconds(4);
-                notification.gameObject.SetActive(false);
-            }
+
             StartCoroutine(waiter());
         }
 
+
+        
+    }
+
+
+
+    IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(15);
+        notification.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

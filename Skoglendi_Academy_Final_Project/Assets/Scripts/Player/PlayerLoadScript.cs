@@ -58,6 +58,17 @@ public class PlayerLoadScript : MonoBehaviour
                 PlayerCharacterLocation.SetActive(true);
             }
 
+            // Load after solving Puzzle 2 getting into green room
+            if (PlayerPrefs.GetInt("PlayerSaveLocation_AutoSave") == 4)
+            {
+                PlayerCharacterLocation.SetActive(false);
+                PlayerCharacterLocation.transform.position = SaveLocations[4].position;
+                PlayerCharacterLocation.SetActive(true);
+            }
+
+
+
+
             DeathScreen.PlayerDied = false;
         }
         // If it's not loading then it's a new game. Reset everything back to its default.
