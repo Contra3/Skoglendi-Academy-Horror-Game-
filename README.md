@@ -56,7 +56,7 @@ Boxes have separate textures on them. They resemble steel blocks that the player
 The three shaders that were implemented were:
 * Outline Shader (Shin) - This shader is used to make bright outlines that are not affected by the dark lighting of the world. Subsequently, the objects that use this shaders are mainly items that can be found around the world, such as keys and scrolls.
 * Cut-through shader (Ronny) - This shader creates an image of transparent stripes that help to immerse the player in a world of magic and wizardry. The objects that use this shader are the boxes in the furnace room.
-* XXX shader (Jon Michael)
+* Inbetweening/Tweening Shader (Jon Michael) - This shaders takes in two different textures to allow inbetweening between the two textures (i.e. producing intermediate textures from and to the two). This is used to detail the player's orb to give it a more mystic and magical feeling.
 
 We implemented several of the suggestions from our testers. 
 * Darker world - Following from a suggestion from one of our testers to make cramped spaces darker, we made the overall lighting of the world darker. In order to keep the game playable, we placed new point lights across the map in the form of torches. This helps to construct a better atmosphere suited for horror games, and aids in the surprise factor of when the monster starts chasing the player.
