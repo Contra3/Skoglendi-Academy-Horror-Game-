@@ -15,6 +15,12 @@ public class TouchRedGem : MonoBehaviour
     private bool nearRedGem = false;
     public static bool puzzle1RedGemTrigger = false;
     private AudioSource audio;
+    public PlayerAutoSaveScript autoSave;
+
+    public AudioSource creatureRoar;
+    public AudioSource statueMove;
+
+
 
     private void Start()
     {
@@ -30,11 +36,21 @@ public class TouchRedGem : MonoBehaviour
         {
             angelStatue.SetActive(true);
             puzzle1RedGemTrigger = true;
+            PlayerSaveScript.PlayerSaveLocation = 2;
+            autoSave.TriggerAutoSaveFeature();
             audio.Play(0);
+            statueMove.Play();
+
+            StartCoroutine(playCreatureRoar());
         }
 
     }
 
+    IEnumerator playCreatureRoar()
+    {
+        yield return new WaitForSeconds(3);
+        creatureRoar.Play();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

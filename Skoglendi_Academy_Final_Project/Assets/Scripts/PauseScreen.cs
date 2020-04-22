@@ -9,6 +9,7 @@ public class PauseScreen : MonoBehaviour
     public GameObject SettingsPanel;
     public GameObject MainCharacter;
     public GameObject MenuCamera;
+    public GameObject CreditsPanel;
 
     private bool isPausePanelEnabled = false;
     private int secondaryMenuTriggered = 0;
@@ -19,6 +20,7 @@ public class PauseScreen : MonoBehaviour
         PausePanel.SetActive(false);
         JournalPanel.SetActive(false);
         SettingsPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
         MenuCamera.SetActive(false);
 
     }
@@ -72,6 +74,13 @@ public class PauseScreen : MonoBehaviour
                 PausePanel.SetActive(true);
                 secondaryMenuTriggered = 0;
             }
+            //Hide Credits
+            else if (secondaryMenuTriggered == 3)
+            {
+                CreditsPanel.SetActive(false);
+                PausePanel.SetActive(true);
+                secondaryMenuTriggered = 0;
+            }
 
         }
     }
@@ -88,6 +97,14 @@ public class PauseScreen : MonoBehaviour
         isPausePanelEnabled = false;
         Time.timeScale = 1f;
     }
+    public void ShowJournal()
+    {
+        secondaryMenuTriggered = 1;
+        PausePanel.SetActive(false);
+        JournalPanel.SetActive(true);
+        SettingsPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
+    }
 
     public void ShowSettings()
     {
@@ -95,14 +112,16 @@ public class PauseScreen : MonoBehaviour
         PausePanel.SetActive(false);
         JournalPanel.SetActive(false);
         SettingsPanel.SetActive(true);
+        CreditsPanel.SetActive(false);
     }
 
-    public void ShowJournal()
+    public void ShowCredits()
     {
-        secondaryMenuTriggered = 1;
+        secondaryMenuTriggered = 3;
         PausePanel.SetActive(false);
-        JournalPanel.SetActive(true);
+        CreditsPanel.SetActive(true);
         SettingsPanel.SetActive(false);
+        JournalPanel.SetActive(false);
     }
 
     public void ExitGame()

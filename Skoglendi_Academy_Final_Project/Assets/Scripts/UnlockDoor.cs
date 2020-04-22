@@ -18,6 +18,7 @@ public class UnlockDoor : MonoBehaviour
     public GameObject DoorTwo;
     private Rigidbody DoorOneRigid;
     private Rigidbody DoorTwoRigid;
+    public PlayerAutoSaveScript autoSave;
 
     private void Start()
     {
@@ -59,7 +60,13 @@ public class UnlockDoor : MonoBehaviour
                     DoorTwoRigid.isKinematic = false;
                 }
 
-                
+                if (PuzzleDoorID == 1) { PlayerSaveScript.PuzzleOneDone = true; PlayerSaveScript.PlayerSaveLocation = 1; }
+                if (PuzzleDoorID == 2) { PlayerSaveScript.PuzzleTwoDone = true; PlayerSaveScript.PlayerSaveLocation = 3; }
+                if (PuzzleDoorID == 3) { PlayerSaveScript.PuzzleThreeDone = true; }
+                if (PuzzleDoorID == 4) { PlayerSaveScript.PuzzleFourDone = true; }
+                if (PuzzleDoorID == 5) { PlayerSaveScript.PuzzleFiveDone = true; }
+
+                autoSave.TriggerAutoSaveFeature();
 
             }
 

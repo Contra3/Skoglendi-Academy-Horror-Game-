@@ -9,6 +9,10 @@ public class PickUpKey : MonoBehaviour
     private AudioSource audio;
     public int keyID;
 
+    [Tooltip("Add the PlayerAutoSaveScript that is attached to the MainCharacter")]
+    public PlayerAutoSaveScript autoSave_Key;
+
+
     private void Start() {
         audio = GetComponentInChildren<AudioSource>();
     }
@@ -23,6 +27,7 @@ public class PickUpKey : MonoBehaviour
             if(keyID == 1)
             {
                 PlayerSaveScript.PuzzleKey1 = true;
+                PlayerSaveScript.PlayerSaveLocation = 0;
             }
             else if (keyID == 2)
             {
@@ -41,6 +46,7 @@ public class PickUpKey : MonoBehaviour
                 PlayerSaveScript.PuzzleKey5 = true;
             }
 
+            autoSave_Key.TriggerAutoSaveFeature();
             audio.Play(0);
         }
 
@@ -55,11 +61,5 @@ public class PickUpKey : MonoBehaviour
     {
         nearKey = false;
     }
-
-
-
-
-
-
 
 }
