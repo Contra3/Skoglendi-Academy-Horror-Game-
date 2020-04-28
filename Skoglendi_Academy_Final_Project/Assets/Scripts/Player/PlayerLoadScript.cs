@@ -58,7 +58,7 @@ public class PlayerLoadScript : MonoBehaviour
                 PlayerCharacterLocation.SetActive(true);
             }
 
-            // Load after solving Puzzle 2 getting into green room
+            // Load after getting the jump scroll
             if (PlayerPrefs.GetInt("PlayerSaveLocation_AutoSave") == 4)
             {
                 PlayerCharacterLocation.SetActive(false);
@@ -66,6 +66,7 @@ public class PlayerLoadScript : MonoBehaviour
                 PlayerCharacterLocation.SetActive(true);
             }
 
+            // Load after solving Puzzle 4
             if (PlayerPrefs.GetInt("PlayerSaveLocation_AutoSave") == 5)
             {
                 PlayerCharacterLocation.SetActive(false);

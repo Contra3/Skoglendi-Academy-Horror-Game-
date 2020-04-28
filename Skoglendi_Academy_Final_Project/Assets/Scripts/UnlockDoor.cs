@@ -61,10 +61,20 @@ public class UnlockDoor : MonoBehaviour
                 }
 
                 // Save locations depending on which door the player interacts with
+
+                // Door that unlocks the area where the AI patrols, sets player before opening the double door
                 if (PuzzleDoorID == 1) { PlayerSaveScript.PuzzleOneDone = true; PlayerSaveScript.PlayerSaveLocation = 1; }
+
+                // Door that unlocks the room with the PURPLE key, sets player inside the PURPLE key room
                 if (PuzzleDoorID == 2) { PlayerSaveScript.PuzzleTwoDone = true; PlayerSaveScript.PlayerSaveLocation = 3; }
+
+                // Door that unlocks the room that has the jump scroll, sets player inside the scroll room 
                 if (PuzzleDoorID == 3) { PlayerSaveScript.PuzzleThreeDone = true; PlayerSaveScript.PlayerSaveLocation = 4; }
-                if (PuzzleDoorID == 4) { PlayerSaveScript.PuzzleFourDone = true; }
+
+                // Door that unlock the expanded area, sets player near the door entrance inside the expanded area
+                if (PuzzleDoorID == 4) { PlayerSaveScript.PuzzleFourDone = true; PlayerSaveScript.PlayerSaveLocation = 5; }
+
+                // Not currently being used
                 if (PuzzleDoorID == 5) { PlayerSaveScript.PuzzleFiveDone = true; }
 
                 autoSave.TriggerAutoSaveFeature();

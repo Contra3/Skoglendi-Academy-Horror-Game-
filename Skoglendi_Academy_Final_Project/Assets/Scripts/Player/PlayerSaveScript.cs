@@ -20,6 +20,7 @@ public class PlayerSaveScript : MonoBehaviour
     public static bool PuzzleKey3 = false;
     public static bool PuzzleKey4 = false;
     public static bool PuzzleKey5 = false;
+    public static bool PuzzleKey6 = false;
 
     // Player default stats
     public static float PlayerMaxStamina = 100f;

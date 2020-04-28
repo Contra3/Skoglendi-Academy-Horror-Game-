@@ -20,6 +20,7 @@ public class PlayerAutoSaveScript : MonoBehaviour
     private int PuzzleKey3_AutoSave;
     private int PuzzleKey4_AutoSave;
     private int PuzzleKey5_AutoSave;
+    private int PuzzleKey6_AutoSave;
 
     // Player default stats
     private float PlayerMaxStamina_AutoSave;
@@ -52,6 +53,7 @@ public class PlayerAutoSaveScript : MonoBehaviour
         if (PlayerSaveScript.PuzzleKey3 == true) { PuzzleKey3_AutoSave = 1; } else { PuzzleKey3_AutoSave = 0; }
         if (PlayerSaveScript.PuzzleKey4 == true) { PuzzleKey4_AutoSave = 1; } else { PuzzleKey4_AutoSave = 0; }
         if (PlayerSaveScript.PuzzleKey5 == true) { PuzzleKey5_AutoSave = 1; } else { PuzzleKey5_AutoSave = 0; }
+        if (PlayerSaveScript.PuzzleKey6 == true) { PuzzleKey6_AutoSave = 1; } else { PuzzleKey6_AutoSave = 0; }
 
         // Save which puzzles the player has done
         PlayerPrefs.SetInt("PuzzleOneDone_AutoSave", PuzzleOneDone_AutoSave);
