@@ -16,4 +16,7 @@ Schedule and deliverable
 	credits (1hr) DONE
 	Shader (2 hrs) DONE
 	stamina bar (3 hrs) DONE
-
+4/29/20
+	Illumination spell (3 hrs) DONE
+	puzzle 5 (1 hr) DONE
+	Tutorial (2 hrs) DONE

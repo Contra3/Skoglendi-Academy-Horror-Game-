@@ -9,6 +9,7 @@ TagManager:
   - waypoint
   - Target
   - CreatureMeleeRange
+  - lightorb
   layers:
   - Default
   - TransparentFX

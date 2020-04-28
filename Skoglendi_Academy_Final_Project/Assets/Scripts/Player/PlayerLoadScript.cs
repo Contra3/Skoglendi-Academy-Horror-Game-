@@ -66,6 +66,12 @@ public class PlayerLoadScript : MonoBehaviour
                 PlayerCharacterLocation.SetActive(true);
             }
 
+            if (PlayerPrefs.GetInt("PlayerSaveLocation_AutoSave") == 5)
+            {
+                PlayerCharacterLocation.SetActive(false);
+                PlayerCharacterLocation.transform.position = SaveLocations[5].position;
+                PlayerCharacterLocation.SetActive(true);
+            }
 
 
 

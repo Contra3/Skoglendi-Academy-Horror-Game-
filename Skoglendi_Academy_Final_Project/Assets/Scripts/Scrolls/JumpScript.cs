@@ -8,7 +8,6 @@ public class JumpScript : MonoBehaviour
     protected bool nearItem = false;
     protected AudioSource audio;
     private bool gotScroll = false;
-
     public Text notification;
 
     private void Start()
@@ -48,7 +47,7 @@ public class JumpScript : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(5);
         notification.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }

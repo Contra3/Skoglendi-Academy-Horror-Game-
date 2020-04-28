@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     // Player Stats
     public SimpleHealthBar healthBar;
     public SimpleHealthBar staminaBar;
+    public Light light;
+    public int light_illumination;
+    private Animator animator;
     public static float maxPlayerHealth = 100f;
     public static float currentPlayerHealth = 100f;
     public static float maxStamina = 100f;
@@ -32,10 +35,11 @@ public class PlayerController : MonoBehaviour
     private bool addingforce;
     private int increment;
     private bool jumpable;
-
+    private bool illuminated;
     // Start is called before the first frame update
     void Start()
     {
+        illuminated = false;
         currentStamina = 100;
         currentPlayerHealth = 100;
         Cursor.lockState = CursorLockMode.Locked;
@@ -55,10 +59,11 @@ public class PlayerController : MonoBehaviour
         line.startWidth = 0.05f;
         line.endWidth = 0.05f;
         line.enabled = false;
-
+        animator = GetComponent<Animator>();
         abilities = new Dictionary<string, bool>()
         {
-            {"JUMP", false}
+            {"JUMP", false},
+            {"ILLUMINATE", false}
         };
     }
 
@@ -70,6 +75,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             currentPlayerHealth = 0;
+        }
+        if (Input.GetKey(KeyCode.Q) && abilities["ILLUMINATE"] && illuminated == false)
+        {
+            print("illuminate!");
+            animator.SetTrigger("Spell");
+            illuminated = true;
+            light.range += light_illumination;
+            GameObject lightorb = GameObject.FindWithTag("lightorb");
+            lightorb.transform.localScale += new Vector3(10f,10f,10f);
+            StartCoroutine(waiterLighter(3));
+            
         }
         if (Input.GetKey(KeyCode.R) && abilities["JUMP"]) 
         {
@@ -161,5 +177,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    IEnumerator waiterLighter(int secs)
+    {
+        yield return new WaitForSeconds(secs);
+        GameObject lightorb = GameObject.FindWithTag("lightorb");
+        lightorb.transform.localScale -= new Vector3(10f,10f,10f);
+        light.range -= light_illumination;
+        illuminated = false;
+        
+    }
 }
