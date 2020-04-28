@@ -8,7 +8,8 @@ public class Puzzle5Activation : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         gameObject.GetComponent<BoxCollider>().enabled = false;
-        creature.gameObject.SetActive(true);
-        
+        creature.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+        creature.gameObject.GetComponent<EnemyController>().enabled = true;
+        creature.gameObject.GetComponent<BoxCollider>().enabled = true;
     }
 }
