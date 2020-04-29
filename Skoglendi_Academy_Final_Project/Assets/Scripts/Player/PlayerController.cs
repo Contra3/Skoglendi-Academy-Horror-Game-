@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            currentPlayerHealth = 0;
+            StartCoroutine(waiterDeath(3));
         }
         if (Input.GetKey(KeyCode.Q) && abilities["ILLUMINATE"] && illuminated == false)
         {
@@ -83,7 +83,6 @@ public class PlayerController : MonoBehaviour
             illuminated = true;
             light.range += light_illumination;
             GameObject lightorb = GameObject.FindWithTag("lightorb");
-            lightorb.transform.localScale += new Vector3(10f,10f,10f);
             StartCoroutine(waiterLighter(3));
             
         }
@@ -181,9 +180,17 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(secs);
         GameObject lightorb = GameObject.FindWithTag("lightorb");
-        lightorb.transform.localScale -= new Vector3(10f,10f,10f);
         light.range -= light_illumination;
         illuminated = false;
         
     }
+    IEnumerator waiterDeath(int secs)
+    {
+        Animator anim = gameObject.GetComponent<Animator>();
+        anim.SetTrigger("Death");
+        gameObject.GetComponent<FirstPersonController>().enabled = false;
+        yield return new WaitForSeconds(secs);
+        currentPlayerHealth = 0;
+    }
+    
 }

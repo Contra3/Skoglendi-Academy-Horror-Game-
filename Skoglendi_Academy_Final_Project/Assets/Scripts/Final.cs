@@ -28,7 +28,9 @@ public class Final : MonoBehaviour
     IEnumerator finalCutScene()
     {
         heartbeat.Play(0);
-        yield return new WaitForSeconds(3);
+        Animator anim = playerCharacter.gameObject.GetComponent<Animator>();
+        anim.SetTrigger("Death");
+        yield return new WaitForSeconds(2);
         playerCharacter.SetActive(false);
         MainUICamera.SetActive(true);
         credits.SetActive(true);
